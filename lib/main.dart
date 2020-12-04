@@ -1,7 +1,21 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-void main() {
-  runApp(MyApp());
+import 'package:flutter/material.dart';
+import 'package:todoapp/utility/env.dart';
+import 'package:todoapp/utility/flavor.dart';
+import 'package:todoapp/utility/utility.dart';
+
+void mainDelegate(Flavor flavor) {
+  print('現在の環境は ${Constants.apiKey} です。');
+  WidgetsFlutterBinding.ensureInitialized();
+  runZoned(() {
+    Utility.init().then((e) {
+      runApp(FlavorProvider(
+        flavor: flavor,
+        child: MyApp(),
+      ));
+    });
+  });
 }
 
 class MyApp extends StatelessWidget {
