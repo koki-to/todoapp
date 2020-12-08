@@ -34,12 +34,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    systemNavigationBarColor:
-        SystemUiOverlayStyle.dark.systemNavigationBarDividerColor,
-  ));
-}
+// void main() {
+//   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+//     systemNavigationBarColor:
+//         SystemUiOverlayStyle.dark.systemNavigationBarDividerColor,
+//   ));
+// }
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
