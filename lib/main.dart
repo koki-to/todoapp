@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:todoapp/utility/env.dart';
 import 'package:todoapp/utility/flavor.dart';
 import 'package:todoapp/utility/utility.dart';
@@ -31,6 +32,13 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
+}
+
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    systemNavigationBarColor:
+        SystemUiOverlayStyle.dark.systemNavigationBarDividerColor,
+  ));
 }
 
 class MyHomePage extends StatefulWidget {
